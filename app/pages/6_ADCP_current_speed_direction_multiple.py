@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 if "fig2" in st.session_state:
-    for i in range(1, 2):
+    for i in range(1, 6):
         st.write(f"ADCP current speed and direction ({i})")
         st.plotly_chart(st.session_state["fig2"], use_container_width=True)
 

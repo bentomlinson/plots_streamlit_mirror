@@ -81,6 +81,7 @@ def plot_adcp(df):
     fig.update_layout(
         coloraxis1={"colorscale": flag_colors, "showscale": False},
         coloraxis2={"colorscale": nan_colors, "showscale": False},
+        height=700,
     )
     fig.update_yaxes(autorange="reversed")
     return fig
