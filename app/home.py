@@ -21,9 +21,7 @@ def uploader_callback():
             del st.session_state[fig_name]
 
 
-st.set_page_config(layout="wide")
-
-st.write("This is the home page.")
+st.set_page_config(layout="centered")
 
 
 uploaded_file =  st.file_uploader("Upload a data file.", on_change=uploader_callback)
@@ -37,11 +35,11 @@ if "file_name" in st.session_state:
 
 if "all_data" in st.session_state:
     df = st.session_state["all_data"]
-    st.write(df)
+    st.dataframe(df)
 
     for fig_name, plot_func in fig_map.items():
         if fig_name not in st.session_state:
             fig = plot_func(df)
-            fig.update_layout({"uirevision": "foo"}, overwrite=True)
+            # fig.update_layout({"uirevision": "foo"}, overwrite=True)
             st.session_state[fig_name] = fig
 

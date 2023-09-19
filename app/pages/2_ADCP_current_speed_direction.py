@@ -1,6 +1,7 @@
 import streamlit as st
 # from plots.plot2 import plot_adcp
 
+st.set_page_config(layout="wide")
 
 if "fig2" in st.session_state:
     for i in range(1, 6):

@@ -1,7 +1,7 @@
 import streamlit as st
 # from plots.plot1 import plot_wind_speed_vs_9999
 
-
+st.set_page_config(layout="wide")
 
 if "fig1" in st.session_state:
     for i in range(1, 6):
